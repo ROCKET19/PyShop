@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Products</h1>
+<div class="row">
+    {% for foru in pdt %}
+        <div class="col">
+        <div class="card" style="width: 18rem;">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ foru.name }}</h5>
+                <p class="card-text">{{ foru.description }}</p>
+                <p><img src="{{foru.image_url}}" height="100" width="100"></img></p>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
